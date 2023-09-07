@@ -1,0 +1,10 @@
+.text-box {
+    margin-bottom: 10px;
+    max-width: 300px; /* Adjust the width as needed */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add padding for spacing and readability */
+    background-color: #f9f9f9; /* Background color */
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+}
