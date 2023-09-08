@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="text-center">
