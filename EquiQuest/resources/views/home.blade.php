@@ -73,8 +73,9 @@
 
 
                             <div class="calendar shadow bg-white p-5">
-                                <div class="d-flex align-items-center py-4">
+                                <div class="d-flex align-items-center justify-content-between py-4">
                                     <h2 class="month font-weight-bold mb-0 text-uppercase">September 2023</h2>
+                                    <button class="btn btn-primary rounded-pill" style="background-color: #454545;border: 1px solid #454545;">+  Add New Event</button>
                                 </div>
                                 {{-- <p class="font-italic text-muted mb-5">No events for this day.</p> --}}
                                 <ol class="day-names list-unstyled">
