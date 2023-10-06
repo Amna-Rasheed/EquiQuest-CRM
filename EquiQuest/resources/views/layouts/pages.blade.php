@@ -74,7 +74,7 @@
                                 @if (Auth::user()->role === 'Admin')
                                     <a class="nav-link dropdown-toggle" href="#" id="crudDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CRUD Operations
+                                        {{ Auth::user()->role }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="crudDropdown">
                                         <a class="dropdown-item" href="{{ route('admin.users') }}">Users</a>
