@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +32,16 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/users/edit/{id}', [App\Http\Controllers\AdminController::class, 'editUser'])->name('admin.users.edit');
     Route::put('/admin/users/update/{id}', [App\Http\Controllers\AdminController::class, 'updateUser'])->name('admin.users.update');
     Route::delete('/admin/users/delete/{id}', [App\Http\Controllers\AdminController::class, 'deleteUser'])->name('admin.users.delete');
+
+    // Horses CRUD operations
+    Route::get('/admin/horses', [AdminController::class, 'listHorses'])->name('admin.horses.index');
+    Route::get('/admin/horses/{id}', [AdminController::class, 'showHorse'])->name('admin.horses.show');
+    Route::get('/horses/create', [AdminController::class, 'createHorse'])->name('admin.horses.create');
+    Route::post('/admin/horses/store', [AdminController::class, 'storeHorse'])->name('admin.horses.store');
+    Route::get('/admin/horses/edit/{id}', [AdminController::class, 'editHorse'])->name('admin.horses.edit');
+    Route::put('/admin/horses/update/{id}', [AdminController::class, 'updateHorse'])->name('admin.horses.update');
+    Route::delete('/admin/horses/delete/{id}', [AdminController::class, 'deleteHorse'])->name('admin.horses.delete');
+
 });
 
 // Stable Manager specific routes

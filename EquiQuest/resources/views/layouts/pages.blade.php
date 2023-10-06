@@ -78,7 +78,7 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="crudDropdown">
                                         <a class="dropdown-item" href="{{ route('admin.users') }}">Users</a>
-                                        <a class="dropdown-item" href="#">Horses</a>
+                                        <a class="dropdown-item" href="{{ route('admin.horses.index') }}">Horses</a>
                                     </div>
                                     <div class="dropdown-divider"></div>
                                 @endif

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Horse;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
@@ -72,5 +73,69 @@ class AdminController extends Controller
     {
         User::find($id)->delete();
         return redirect()->route('admin.users')->with('success', 'User deleted successfully!');
+    }
+
+    // Horses CRUD functions
+    public function listHorses()
+    {
+        $horses = Horse::all();
+        return view('admin.horses.index', compact('horses'));
+    }
+
+    public function showHorse($id)
+    {
+        $horse = Horse::findOrFail($id);
+        return view('admin.horses.show', compact('horse'));
+    }
+
+    public function createHorse()
+    {
+        return view('admin.horses.create');
+    }
+
+    public function storeHorse(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'age' => 'required|integer',
+            'breed' => 'required',
+            'training_status' => 'required',
+        ]);
+
+        Horse::create($request->all());
+
+        return redirect()->route('admin.horses.index')
+            ->with('success', 'Horse created successfully');
+    }
+
+    public function editHorse($id)
+    {
+        $horse = Horse::findOrFail($id);
+        return view('admin.horses.edit', compact('horse'));
+    }
+
+    public function updateHorse(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'age' => 'required|integer',
+            'breed' => 'required',
+            'training_status' => 'required',
+        ]);
+
+        $horse = Horse::findOrFail($id);
+        $horse->update($request->all());
+
+        return redirect()->route('admin.horses.index')
+            ->with('success', 'Horse updated successfully');
+    }
+
+    public function deleteHorse($id)
+    {
+        $horse = Horse::findOrFail($id);
+        $horse->delete();
+
+        return redirect()->route('admin.horses.index')
+            ->with('success', 'Horse deleted successfully');
     }
 }
