@@ -6,12 +6,15 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <style>
-            
+
         </style>
     </head>
+
     <body>
         <div class="container">
             <div class="row justify-content-center">
@@ -31,7 +34,7 @@
                                 <div class="text-box">
 
                                     <h2><i class="fa fa-calendar mr-1"></i> Monthly health check up</h2>
-                                    
+
                                     <p>10:30</p>
                                 </div>
 
@@ -75,7 +78,9 @@
                             <div class="calendar shadow bg-white p-5">
                                 <div class="d-flex align-items-center justify-content-between py-4">
                                     <h2 class="month font-weight-bold mb-0 text-uppercase">September 2023</h2>
-                                    <button class="btn btn-primary rounded-pill" style="background-color: #454545;border: 1px solid #454545;">+  Add New Event</button>
+                                    <button class="btn btn-primary rounded-pill"
+                                        style="background-color: #454545;border: 1px solid #454545;">+ Add New
+                                        Event</button>
                                 </div>
                                 {{-- <p class="font-italic text-muted mb-5">No events for this day.</p> --}}
                                 <ol class="day-names list-unstyled">
@@ -214,7 +219,7 @@
                         <div class="card-header">{{ __('Statistics') }}</div>
 
                         <div class="card-body d-flex justify-content-around align-items-center">
-                            
+
                             <div class="card border-0  rounded-xl" style="width: 20rem; ">
                                 <div class="card-body text-center">
                                     <i class="fa-solid fa-horse-head" style="font-size: 64px"></i>
@@ -233,16 +238,12 @@
                                     <p class="card-text fs-2">$1,500 Revenue</p>
                                 </div>
                             </div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        </div>
         </div>
         <div class="footer-basic">
             <footer>
