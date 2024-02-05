@@ -22,6 +22,7 @@
                 <select class="form-select" id="role" name="role" required>
                     <option value="Admin">Admin</option>
                     <option value="Stable Manager">Stable Manager</option>
+                    <option value="Customer">Customer</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

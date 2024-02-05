@@ -26,7 +26,7 @@ class AdminController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
-            'role' => 'required|string|in:Admin,Stable Manager',
+            'role' => 'required|string|in:Admin,Stable Manager,Customer',
         ]);
 
         $user = new User([
@@ -71,7 +71,7 @@ class AdminController extends Controller
 
     public function deleteUser($id)
     {
-        User::find($id)->delete();
+        User::findOrFail($id)->delete();
         return redirect()->route('admin.users')->with('success', 'User deleted successfully!');
     }
 

@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <style>
 
@@ -21,7 +23,6 @@
                 <div class="col-md-12" style="margin-bottom: 20px;">
                     <div class="card md-2">
                         <div class="card-header">{{ __('Daily Overview') }}</div>
-
                         <div class="card-body">
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
@@ -32,14 +33,10 @@
 
                             <div class="daily">
                                 <div class="text-box">
-
                                     <h2><i class="fa fa-calendar mr-1"></i> Monthly health check up</h2>
-
                                     <p>10:30</p>
                                 </div>
-
                                 <div class="text-box">
-
                                     <h2><i class="fa fa-user mr-1"></i> Staff meeting</h2>
                                     <p>13:00</p>
 
@@ -77,7 +74,7 @@
 
                             <div class="calendar shadow bg-white p-5">
                                 <div class="d-flex align-items-center justify-content-between py-4">
-                                    <h2 class="month font-weight-bold mb-0 text-uppercase">September 2023</h2>
+                                    <h2 class="month font-weight-bold mb-0 text-uppercase">October 2023</h2>
                                     <button class="btn btn-primary rounded-pill"
                                         style="background-color: #454545;border: 1px solid #454545;">+ Add New
                                         Event</button>
@@ -132,15 +129,14 @@
                                     </li>
                                     <li>
                                         <div class="date">8</div>
-                                        <div class="event bg-primary">Meeting</div>
-                                        <div class="event bg-primary">Monthly health checkup</div>
                                     </li>
                                     <li>
                                         <div class="date">9</div>
                                     </li>
                                     <li>
                                         <div class="date">10</div>
-                                        <div class="event bg-success">Riding Lesson</div>
+                                        <div class="event bg-primary">Meeting</div>
+                                        <div class="event bg-primary">Monthly health checkup</div>
                                     </li>
                                     <li>
                                         <div class="date">11</div>

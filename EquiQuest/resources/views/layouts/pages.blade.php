@@ -37,20 +37,46 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Home') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Horses') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Stable') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Staff') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Vets & Suppliers') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Payments') }}</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Notifications') }}</a>
+                        @if (Auth::user()->role === 'Customer')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customer.home') }}">{{ __('Home') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customer.bookings') }}">{{ __('Bookings') }}</a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customer.horse') }}">{{ __('Horses') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customer.events') }}">{{ __('Events') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customer.resources') }}">{{ __('Resources') }}</a>
+                            @elseif (Auth::user()->role === 'Admin')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.home') }}">{{ __('Home') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.users') }}">Users</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.horses.index') }}">Horses</a>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="{{ route('admin.bookings.index') }}">{{ __('Bookings') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.analytics') }}">{{ __('Analytics') }}</a>
+                            @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('stablemanager.home') }}">{{ __('Home') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('stablemanager.horses') }}">{{ __('Horses') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('stablemanager.stable') }}">{{ __('Stable') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('stablemanager.staff') }}">{{ __('Staff') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="{{ route('stablemanager.vetssupplier') }}">{{ __('Vets & Suppliers') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="{{ route('stablemanager.payments') }}">{{ __('Payments') }}</a>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -69,20 +95,6 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <!-- Conditionally display CRUD for Admin -->
-                                @if (Auth::user()->role === 'Admin')
-                                    <a class="nav-link dropdown-toggle" href="#" id="crudDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{ Auth::user()->role }}
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="crudDropdown">
-                                        <a class="dropdown-item" href="{{ route('admin.users') }}">Users</a>
-                                        <a class="dropdown-item" href="{{ route('admin.horses.index') }}">Horses</a>
-                                    </div>
-                                    <div class="dropdown-divider"></div>
-                                @endif
-                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

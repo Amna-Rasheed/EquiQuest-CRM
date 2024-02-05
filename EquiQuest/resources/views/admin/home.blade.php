@@ -53,7 +53,7 @@
 
                                 <div class="text-box">
 
-                                    <h2><i class="fa fa-tools mr-1"></i> Replace missing tiles in roof</h2>
+                                    <h2><i class="fa fa-user mr-1"></i> Meeting with stable manager</h2>
                                     <p>17:00</p>
 
                                 </div>
@@ -77,7 +77,7 @@
 
                             <div class="calendar shadow bg-white p-5">
                                 <div class="d-flex align-items-center justify-content-between py-4">
-                                    <h2 class="month font-weight-bold mb-0 text-uppercase">September 2023</h2>
+                                    <h2 class="month font-weight-bold mb-0 text-uppercase">October 2023</h2>
                                     <button class="btn btn-primary rounded-pill"
                                         style="background-color: #454545;border: 1px solid #454545;">+ Add New
                                         Event</button>
@@ -132,15 +132,15 @@
                                     </li>
                                     <li>
                                         <div class="date">8</div>
-                                        <div class="event bg-primary">Meeting</div>
-                                        <div class="event bg-primary">Monthly health checkup</div>
+
                                     </li>
                                     <li>
                                         <div class="date">9</div>
                                     </li>
                                     <li>
                                         <div class="date">10</div>
-                                        <div class="event bg-success">Riding Lesson</div>
+                                        <div class="event bg-primary">Meeting</div>
+                                        <div class="event bg-primary">Monthly health checkup</div>
                                     </li>
                                     <li>
                                         <div class="date">11</div>
@@ -151,7 +151,7 @@
                                     </li>
                                     <li>
                                         <div class="date">13</div>
-                                        <div class="event bg-success">Riding Lesson</div>
+                                        <div class="event bg-success">Workshop</div>
                                     </li>
                                     <li>
                                         <div class="date">14</div>
